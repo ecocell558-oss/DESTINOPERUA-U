@@ -67,12 +67,24 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
+        /* Logo + Nome alinhados profissionalmente */
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             font-weight: bold;
             color: var(--primary-gold);
             z-index: 1001;
+            line-height: 1;
+        }
+
+        .logo img {
+            height: 1.5em;      /* mesma altura visual do texto */
+            width: auto;
+            display: block;
+            object-fit: contain;
         }
 
         nav ul {
@@ -486,6 +498,15 @@
             .card-header h3 {
                 font-size: 1.6rem;
             }
+
+            /* Logo levemente menor no mobile para caber bem */
+            .logo {
+                font-size: 1.2rem;
+                gap: 8px;
+            }
+            .logo img {
+                height: 1.4em;
+            }
         }
     </style>
 </head>
@@ -493,7 +514,10 @@
 
     <!-- Header -->
     <header>
-        <div class="logo">Destino Peruaçu</div>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Destino Peruaçu">
+            <span>Destino Peruaçu</span>
+        </div>
         <nav>
             <ul>
                 <li><a href="#sobre">O Parque</a></li>
