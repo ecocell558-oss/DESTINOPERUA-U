@@ -293,21 +293,41 @@
             flex-grow: 1;
         }
 
+        /* Lista de itens do roteiro - alinhamento profissional */
         .card-body ul {
             list-style: none;
             margin-bottom: 20px;
+            padding: 0;
         }
 
         .card-body li {
-            margin-bottom: 10px;
             display: flex;
             align-items: flex-start;
+            margin-bottom: 12px;
+            line-height: 1.5;
+            font-size: 1rem;
         }
 
         .card-body li i {
             color: var(--secondary-green);
             margin-right: 10px;
             margin-top: 5px;
+            flex-shrink: 0;
+        }
+
+        /* Texto da lista com quebra adequada */
+        .card-body li .li-text {
+            flex: 1;
+        }
+
+        .card-body li .li-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .card-body > p {
+            margin-bottom: 15px;
+            font-size: 1rem;
         }
 
         .btn-whatsapp {
@@ -454,6 +474,18 @@
             .section-title { font-size: 2rem; }
             iframe.mapa { height: 300px; }
             .galeria-grid { grid-template-columns: 1fr; }
+            
+            /* Ajustes finos para os cards em mobile */
+            .card-body {
+                padding: 22px;
+            }
+            .card-body li {
+                font-size: 0.95rem;
+                margin-bottom: 14px;
+            }
+            .card-header h3 {
+                font-size: 1.6rem;
+            }
         }
     </style>
 </head>
@@ -523,10 +555,22 @@
                 <div class="card-body">
                     <p>Ideal para quem tem pouco tempo, mas não quer perder o principal atrativo do parque.</p>
                     <ul>
-                        <li><i class="fas fa-check-circle"></i> <strong>Gruta do Janelão:</strong> Trilha de 4,8km (ida e volta).</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Nível:</strong> Semipesado (aprox. 5h30).</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Destaques:</strong> Perna da Bailarina, pinturas rupestres e paisagens.</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Inclui:</strong> Condutor credenciado e suporte.</li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span class="li-text"><strong>Gruta do Janelão:</strong> Trilha de 4,8km (ida e volta).</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span class="li-text"><strong>Nível:</strong> Semipesado (aprox. 5h30).</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span class="li-text"><strong>Destaques:</strong> Perna da Bailarina, pinturas rupestres e paisagens.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span class="li-text"><strong>Inclui:</strong> Condutor credenciado e suporte.</span>
+                        </li>
                     </ul>
                     <a href="https://wa.me/553899041829?text=Ol%C3%A1!%20Quero%20reservar%20o%20Roteiro%20Cl%C3%A1ssico%20de%201%20dia%20no%20Destino%20Perua%C3%A7u.%20Pode%20me%20dar%20mais%20informa%C3%A7%C3%B5es%3F" class="btn-whatsapp" target="_blank">
                         <i class="fab fa-whatsapp"></i> Reservar Roteiro 1 Dia
@@ -543,10 +587,22 @@
                 <div class="card-body">
                     <p>A experiência definitiva para explorar as cavernas, a cultura local e as belezas naturais.</p>
                     <ul>
-                        <li><i class="fas fa-check-circle"></i> <strong>Atrativos:</strong> Janelão, Lapa do Índio, Lapa Bonita, Lapa dos Desenhos, Lapa do Rezar.</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Cultura:</strong> Visita à comunidade Xakriabá e Cerâmica.</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Logística:</strong> Hospedagem e transporte inclusos.</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Nível:</strong> Variado (leve a pesado).</li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span class="li-text"><strong>Atrativos:</strong> Janelão, Lapa do Índio, Lapa Bonita, Lapa dos Desenhos, Lapa do Rezar.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span class="li-text"><strong>Cultura:</strong> Visita à comunidade Xakriabá e Cerâmica.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span class="li-text"><strong>Logística:</strong> Hospedagem e transporte inclusos.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span class="li-text"><strong>Nível:</strong> Variado (leve a pesado).</span>
+                        </li>
                     </ul>
                     <a href="https://wa.me/553899041829?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Expedi%C3%A7%C3%A3o%20Completa%20de%203%20a%204%20dias%20no%20Destino%20Perua%C3%A7u.%20Pode%20me%20enviar%20o%20roteiro%20e%20valores%3F" class="btn-whatsapp" target="_blank">
                         <i class="fab fa-whatsapp"></i> Reservar Expedição
